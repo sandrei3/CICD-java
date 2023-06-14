@@ -3,7 +3,7 @@ name: Java CICD with Gradle
 on:
   push:
     branches: [ main ]
-    
+    ##############
 env:
   DATREE_TOKEN: ${{ secrets.DATREE_TOKEN }} 
   KUBECONFIG: /home/alerts_deekshith/kubeconfig/config_now 
