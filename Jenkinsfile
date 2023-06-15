@@ -4,7 +4,15 @@ pipeline{
         VERSION = "${env.BUILD_ID}"
     }
     stages{
-
+        stage("sonar quality check"){
+            agent {
+                docker {
+                    image 'openjdk:15'
+                }
+            }
+  
+            }
+        }
         stage("docker build & docker push"){
             steps{
                 script{
