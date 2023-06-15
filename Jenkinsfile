@@ -10,6 +10,14 @@ pipeline{
                     image 'openjdk:15'
                 }
             }
+            steps{
+                script{
+                     if (fileExists('src/main/resources/index.html')) {
+                         echo "File src/main/resources/index.html found!"
+            }
+
+                }  
+            }
         }
         stage("docker build & docker push"){
             steps{
